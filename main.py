@@ -125,7 +125,8 @@ def get_candidate_programs_by_hobbies(data, resident, limit=3):
 # ------------------------------------------------------------------------
 if __name__ == '__main__':
   my_data = load_json_file("data.json")
-  print(len(my_data['residents']))
+
+  # 1.
   resident = get_resident_by_name(my_data, 'Darla Blanda')
 
   resident_programs_categories = check_resident_programs_categories(my_data, resident)
