@@ -1,8 +1,8 @@
 import uuid
+import json
 import pprint
 import datetime
 from collections import OrderedDict
-from main import load_json_file
 
 # Plan:
 # First, check the data to see if there are any activites that correspond to her listed interests
@@ -123,6 +123,11 @@ RECOMMENDED_PROGRAMS = {
   }
 }
 
+def load_json_file(filepath):
+  with open(filepath) as f:
+    data = json.load(f)
+  return data
+
 def get_resident_by_name(data, given_name):
   residents = data['residents']
   for resident in residents:
@@ -184,5 +189,5 @@ if __name__ == '__main__':
   # pprint.pprint(OrderedDict(sorted(attended_programs_info.items(), key=lambda item: item[1][0], reverse=True)))
   # pprint.pprint(OrderedDict(sorted(num_programs_by_hobby.items(), key=lambda item: item[1], reverse=True)))
   # # print('Total Programs Attended by Resident: ' + str(total_programs))
-  # pprint.pprint('Recommended Programs for ' + resident_name + ':')
-  # pprint.pprint(RECOMMENDED_PROGRAMS)
+  pprint.pprint('Recommended Programs for ' + resident_name + ':')
+  pprint.pprint(RECOMMENDED_PROGRAMS)
