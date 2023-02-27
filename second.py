@@ -7,6 +7,10 @@ import pprint
 import operator
 from main import load_json_file
 
+# 1. Something that engages the most amount of people by their interests
+# 2. Something that is similar to the most attended programs previously
+# 3. Something is engages the most residents by their level of care / the most generalized community events (e.g food) 
+
 RECOMMENDED_PROGRAMS = {
   1: {
     #"id": "d1c3ef3a-1396-470a-8ac5-518cda34f6f7",
